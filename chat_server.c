@@ -26,6 +26,7 @@ void report(const char* msg, int terminate) {
 void *client_handler(void *socket_desc) {
     // Initialize variables
     int new_sock = *(int*)socket_desc;
+    free(socket_desc);
     char client_message[BUFFER_SIZE];
     char username[100];
 
