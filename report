@@ -1,0 +1,9 @@
+We split up the project and worked on pieces together.
+
+The program uses multithreading to handle different users connecting to the server. The server will broadcast messages to all users connected, and using the time.h library we are able to have a timestamp for each user. The client side handles the initial portion of connecting to the server by creating a socket and prompting the user for a username. In its main, it will continue prompting the client to enter a message and the kill command to end the connection. The server also creates a socket, connects it to a provided port, and waits for a client to connect. After a client connects with the same port, it receives the clients username adding it to an array of client sockets, creating a new thread to handle that client's messages. It will continually broadcasts their messages repeating the username and continually writing to chat_history until the server is closed or killed.
+
+Max Lau - Finished large portions of the chat_client.c and chat_server.c and got them to a compiling condition.
+
+Arthur Nguyen - Continued working on Max's code, added error handling, made several large changes such as getting the chat_history.
+
+Sean Sang - Created the repo for us to work on. Created the skeleton for chat_server.c and added in username and timestamp functionality.
